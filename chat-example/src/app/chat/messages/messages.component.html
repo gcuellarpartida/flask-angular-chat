@@ -1,0 +1,15 @@
+<mat-card class="card" *ngIf="chattingWith">
+  <mat-card-header>
+    <mat-card-title>Chatting with {{ chattingWith.name }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="card-content">
+    <div [ngClass]="msg.to == chattingWith.id ? 'message_to' : 'message_from' "
+        *ngFor="let msg of chat.messages | filterBy: filter">
+      {{msg.message}}
+      <span style="color: lightblue; font-size: 10px; font-style: italic;">{{msg.date | date: "HH:mm:ss"}}</span>
+    </div>
+  </mat-card-content>
+  <mat-form-field class="full-width">
+    <textarea matInput placeholder="Message" [(ngModel)]="messageText" (keydown.enter)="sendMessage()"></textarea>
+  </mat-form-field>
+</mat-card>

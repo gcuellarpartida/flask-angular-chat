@@ -1,0 +1,46 @@
+.card {
+  max-width: 500px;
+  min-width: 120px;
+  margin: 20px auto;
+}
+
+.message_to {
+  display: block;
+  border-radius: 15px;
+  background-color: #0b5894;
+  padding: 10px;
+  color: white;
+  float: left;
+  clear: both;
+  margin-top: 15px;
+  max-width: 400px;
+  word-wrap: break-word;
+}
+
+.message_from {
+  display: block; float: right;
+  border-radius: 15px;
+  background-color: #0b5894;
+  padding: 10px;
+  color: white;
+  clear: both;
+  margin-top: 15px;
+  max-width: 400px;
+  word-wrap: break-word;
+}
+
+.card-content {
+  padding-top: 15px;
+  max-height: 400px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.submit-button {
+  display:flex;
+  justify-content: flex-end;
+}
+
+.full-width {
+  width: 100%
+}
