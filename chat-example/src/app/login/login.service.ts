@@ -13,7 +13,7 @@ export class LoginService {
 
   login(user: UserDetails) {
     this.user = user;
-    this.isAuthenticated = !this.isAuthenticated;
+    this.isAuthenticated = true;
     this.socket.emit('sign_in', this.user);
   }
 }
